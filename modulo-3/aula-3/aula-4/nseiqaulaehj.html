@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <h1 style="text-align:center">Formulario super importante</h1>
+  <div style="text-align:center">
+  <form id="form-contato" action="/enviar" method="post">
+    <input type="text" name="nome"
+     placeholder="Seu nome"><br> <br>
+
+    <input type="email" name="email"
+     placeholder="Seu@email.com"> <br> <br>
+
+    <input type="password" name="senha" required
+     placeholder="Sua senha"> <br>
+  </div>
+  <div style="text-align:center">
+
+    <label for="cep">CEP</label>
+    <input type="text"
+     id="cep"
+     name="cep"
+     pattern="[0-9]{5}-[0-9]{3}"
+     title="Formado esperado:00000-000"> <br>
+
+    <label for="telefone">Telefone</label>
+    <input type="text"
+     id="Telefone"
+     name="Telefone"
+     pattern="[0-9]{2}[0-9]{4}-[0-9]{4}"
+     title="Formado esperado:00 0000-0000"> <br>
+    <input type="radio" name"genero"
+     value="f"> Feminino
+
+    <input type="radio" name"Masculino"
+     value="m"> Masculino <br>
+
+
+    <p> Para proseguir com a inscrição é necessário uma foto sua.</p>
+    <input type="file" name"foto_file" <br> <br>
+
+    <input type="checkbox" id="campo-aceite" name="aceite">
+
+    <label  for="campo-aceite">Aceito e concordo com os termos de uso.</label> <br>
+
+
+    <button type="submit">Enviar mensagem</button>
+
+
+    </form>
+
+<script>
+      const formulario = document.querySelector("#form-contato");
+       formulario.addEventListener("submit",
+       function (event) {
+        event.preventDefault();
+        alert("Mensagem enviada com sucesso!");
+        });
+      
+    </script>
+
+
+
+</body>
+
+</html>
